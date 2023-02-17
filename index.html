@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Kids Story Generator</title>
+    <title>Children's Story Generator</title>
   </head>
   <body>
-    <div id="container">
-      <h1>Kids Story Generator</h1>
-      <div id="story-container">
-        <p id="generated-story"></p>
-      </div>
-      <div>
-        <label for="prompt">Enter a story prompt:</label>
-        <input type="text" id="prompt" placeholder="Once upon a time...">
-      </div>
-      <div>
-        <label for="reading-level">Select reading level:</label>
-        <select id="reading-level">
-          <option value="1">Grade 1</option>
-          <option value="2">Grade 2</option>
-          <option value="3">Grade 3</option>
-        </select>
-      </div>
-      <button onclick="generateStory()">Generate Story</button>
+    <div class="container">
+      <h1>Children's Story Generator</h1>
+      <form>
+        <label for="storyPrompt">Story Prompt:</label><br>
+        <textarea id="storyPrompt" name="storyPrompt" rows="5" cols="50"></textarea><br>
+
+        <label for="readingLevel">Reading Level:</label><br>
+        <select id="readingLevel" name="readingLevel">
+          <option value="1">Level 1 (Ages 4-6)</option>
+          <option value="2">Level 2 (Ages 7-9)</option>
+          <option value="3">Level 3 (Ages 10-12)</option>
+        </select><br><br>
+
+        <button type="button" id="generateButton" onclick="generateStory()">Generate Story</button>
+      </form>
+
+      <div id="storyDisplay"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/rita@2.4.14/rita-full.js"></script>
+
+    <script src="https://unpkg.com/rita@2.8.31/dist/rita.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
