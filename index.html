@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kids Story Generator</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Kids Story Generator</h1>
+      <div id="story-container">
+        <p id="generated-story"></p>
+      </div>
+      <div>
+        <label for="prompt">Enter a story prompt:</label>
+        <input type="text" id="prompt" placeholder="Once upon a time...">
+      </div>
+      <div>
+        <label for="reading-level">Select reading level:</label>
+        <select id="reading-level">
+          <option value="1">Grade 1</option>
+          <option value="2">Grade 2</option>
+          <option value="3">Grade 3</option>
+        </select>
+      </div>
+      <button onclick="generateStory()">Generate Story</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/rita@2.4.14/rita-full.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
